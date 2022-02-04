@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.0 on win32)" generated="20220107 20:17:46.966" rpa="false">
+<suite id="s1" name="Solution-IPVPN" source="C:\ShakeoutIPVPN\Solution-IPVPN">
+<suite id="s1-s1" name="Tests" source="C:\ShakeoutIPVPN\Solution-IPVPN\Tests">
+<suite id="s1-s1-s1" name="IPVPN" source="C:\ShakeoutIPVPN\Solution-IPVPN\Tests\IPVPN">
+<suite id="s1-s1-s1-s1" name="IPVPN Install Scenarios" source="C:\ShakeoutIPVPN\Solution-IPVPN\Tests\IPVPN\IPVPN_Install_Scenarios.robot">
+<test id="s1-s1-s1-s1-t1" name="Complete Tasks in ASRI">
+<kw name="Given I Login to ASRI" library="ASRI-tool-StepDefinitions">
+<kw name="Launch ASRI" library="ASRI_Login_Keywords">
+<arguments>
+<arg>${ASRI_URL}</arg>
+</arguments>
+<msg timestamp="20220107 20:17:47.850" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220107 20:17:51.571" level="INFO">Opening url 'http://amd01adc-uat.adc1.level3.com:20100/AmdocsOSS/Portal/login.html'</msg>
+<status status="PASS" starttime="20220107 20:17:47.846" endtime="20220107 20:18:02.762"></status>
+</kw>
+<kw name="Login To ASRI" library="ASRI_Login_Keywords">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220107 20:18:02.763" level="INFO">Typing text 'AB99286' into text field 'xpath://input[@type='text']'.</msg>
+<msg timestamp="20220107 20:18:04.860" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20220107 20:18:04.860" level="INFO">Typing text 'VErna@1951' into text field 'xpath://input[@type='password']'.</msg>
+<msg timestamp="20220107 20:18:06.948" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20220107 20:18:06.948" level="INFO">Clicking element 'xpath://span[text()='Login']'.</msg>
+<msg timestamp="20220107 20:18:11.998" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220107 20:18:02.763" endtime="20220107 20:18:12.024"></status>
+</kw>
+<status status="PASS" starttime="20220107 20:17:47.846" endtime="20220107 20:18:12.024"></status>
+</kw>
+<kw name="And I Click on Tasks Menu" library="ASRI-tool-StepDefinitions">
+<kw name="Click On Team Tasks" library="ASRI_Search_Order_Keywords">
+<msg timestamp="20220107 20:18:12.052" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView(true)
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="9b5fb6a77d285b12be2ea81369359d4c", element="285c7bcb-d892-457c-8d75-f53fbe1db2e0")&gt;'</msg>
+<msg timestamp="20220107 20:18:12.057" level="INFO">Executing JavaScript:
+arguments[0].click()
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="9b5fb6a77d285b12be2ea81369359d4c", element="285c7bcb-d892-457c-8d75-f53fbe1db2e0")&gt;'</msg>
+<msg timestamp="20220107 20:18:12.075" level="INFO">Clicked on locator xpath://div[@id='more']</msg>
+<msg timestamp="20220107 20:18:15.075" level="INFO">Slept 3 seconds</msg>
+<msg timestamp="20220107 20:18:15.103" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView(true)
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="9b5fb6a77d285b12be2ea81369359d4c", element="36d3f22d-015b-4fff-85da-1c943fb49ab3")&gt;'</msg>
+<msg timestamp="20220107 20:18:15.109" level="INFO">Executing JavaScript:
+arguments[0].click()
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="9b5fb6a77d285b12be2ea81369359d4c", element="36d3f22d-015b-4fff-85da-1c943fb49ab3")&gt;'</msg>
+<msg timestamp="20220107 20:18:15.122" level="INFO">Clicked on locator xpath://li[text()='Tasks']</msg>
+<msg timestamp="20220107 20:18:15.123" level="INFO">Executing JavaScript:
+return document.readyState === "complete"
+Without any arguments.</msg>
+<status status="PASS" starttime="20220107 20:18:12.025" endtime="20220107 20:18:15.128"></status>
+</kw>
+<status status="PASS" starttime="20220107 20:18:12.025" endtime="20220107 20:18:15.129"></status>
+</kw>
+<kw name="And I Search with the Order package ID" library="ASRI-tool-StepDefinitions">
+<kw name="Search With The Order Package ID" library="ASRI_Search_Order_Keywords">
+<arguments>
+<arg>${var_customerordernum}</arg>
+</arguments>
+<msg timestamp="20220107 20:18:15.420" level="INFO">Selecting frame 'xpath://iframe[@id='3frame']'.</msg>
+<msg timestamp="20220107 20:19:00.302" level="INFO">Slept 10 seconds</msg>
+<msg timestamp="20220107 20:19:00.302" level="INFO">Clicking element 'xpath://div[text()='Team Tasks']'.</msg>
+<msg timestamp="20220107 20:19:03.488" level="INFO">Simulating Mouse Over on element 'xpath://div[text()='Task Due Date']/../..//div[@title='Project']'.</msg>
+<msg timestamp="20220107 20:19:08.827" level="INFO">Slept 5 seconds</msg>
+<msg timestamp="20220107 20:19:08.868" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView(true)
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="9b5fb6a77d285b12be2ea81369359d4c", element="b380a484-c3b1-4991-80c0-e1428d847b71")&gt;'</msg>
+<msg timestamp="20220107 20:19:08.883" level="INFO">Executing JavaScript:
+arguments[0].click()
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="9b5fb6a77d285b12be2ea81369359d4c", element="b380a484-c3b1-4991-80c0-e1428d847b71")&gt;'</msg>
+<msg timestamp="20220107 20:19:08.905" level="INFO">Clicked on locator (//div[@class='columnFilterIcon'])[2]</msg>
+<msg timestamp="20220107 20:19:18.906" level="INFO">Slept 10 seconds</msg>
+<msg timestamp="20220107 20:19:18.931" level="INFO">Typing text '552280353' into text field 'xpath://div[text()='Project Name']/following-sibling::input'.</msg>
+<msg timestamp="20220107 20:19:22.054" level="INFO">Slept 3 seconds</msg>
+<msg timestamp="20220107 20:19:22.054" level="INFO">Clicking element 'xpath://div[text()='Project Name']/../../../../div[5]/div[2]/div'.</msg>
+<msg timestamp="20220107 20:19:32.166" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220107 20:18:15.130" endtime="20220107 20:19:32.170"></status>
+</kw>
+<status status="PASS" starttime="20220107 20:18:15.129" endtime="20220107 20:19:32.171"></status>
+</kw>
+<kw name="And I Complete Device Port Selection task" library="ASRI-tool-StepDefinitions">
+<kw name="Complete Device Port Selection Task" library="ASRI_TDG_Task_Keywords">
+<msg timestamp="20220107 20:19:42.178" level="INFO">Slept 10 seconds</msg>
+<msg timestamp="20220107 20:19:42.178" level="INFO">Selecting frame 'xpath://iframe[@id='3frame']'.</msg>
+<msg timestamp="20220107 20:19:42.228" level="INFO">Task is present</msg>
+<msg timestamp="20220107 20:19:42.228" level="INFO">Clicking element 'xpath://div[@class='assignToMeButton button']/../../../preceding-sibling::td/div/a[@class='taskName']'.</msg>
+<msg timestamp="20220107 20:19:42.320" level="INFO">Selecting frame 'xpath://div[1]/div[3]/iframe'.</msg>
+<msg timestamp="20220107 20:19:57.550" level="INFO">Selecting frame 'xpath://iframe[@id='asri-app-custom-iframe']'.</msg>
+<msg timestamp="20220107 20:20:25.824" level="INFO">Clicking element 'xpath://select[@id='selectedFormDevice']/option[text()='TAMRFLWSZG001']'.</msg>
+<msg timestamp="20220107 20:20:25.895" level="INFO">Clicking element 'xpath://div[@id='mat-select-value-1']'.</msg>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath:(//div[@id='mat-select-0-panel']/mat-option/span[contains(text(),'GigabitEthernet')])[1]</arg>
+</arguments>
+<msg timestamp="20220107 20:20:42.272" level="INFO">Current page contains element 'xpath:(//div[@id='mat-select-0-panel']/mat-option/span[contains(text(),'GigabitEthernet')])[1]'.</msg>
+<status status="PASS" starttime="20220107 20:20:42.262" endtime="20220107 20:20:42.272"></status>
+</kw>
+<msg timestamp="20220107 20:20:42.272" level="INFO">Clicking element 'xpath:(//div[@id='mat-select-0-panel']/mat-option/span[contains(text(),'GigabitEthernet')])[1]'.</msg>
+<msg timestamp="20220107 20:20:52.541" level="INFO">Slept 10 seconds</msg>
+<msg timestamp="20220107 20:20:52.553" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView(true)
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="9b5fb6a77d285b12be2ea81369359d4c", element="030ea9ff-0735-4071-a675-df36276873a1")&gt;'</msg>
+<msg timestamp="20220107 20:20:52.559" level="INFO">Executing JavaScript:
+arguments[0].click()
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="9b5fb6a77d285b12be2ea81369359d4c", element="030ea9ff-0735-4071-a675-df36276873a1")&gt;'</msg>
+<msg timestamp="20220107 20:20:52.571" level="INFO">Clicked on locator xpath://label[contains(text(),'UNI Extension :')]</msg>
+<msg timestamp="20220107 20:20:52.575" level="INFO">Selecting frame 'xpath://iframe[@id='3frame']'.</msg>
+<msg timestamp="20220107 20:20:52.606" level="INFO">Selecting frame 'xpath://div[1]/div[3]/iframe'.</msg>
+<msg timestamp="20220107 20:20:52.643" level="INFO">Executing JavaScript:
+arguments[0].scrollIntoView(true)
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="9b5fb6a77d285b12be2ea81369359d4c", element="cbf513be-7d4e-48a0-b711-e7c973ca80bf")&gt;'</msg>
+<msg timestamp="20220107 20:20:52.649" level="INFO">Executing JavaScript:
+arguments[0].click()
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="9b5fb6a77d285b12be2ea81369359d4c", element="cbf513be-7d4e-48a0-b711-e7c973ca80bf")&gt;'</msg>
+<msg timestamp="20220107 20:20:52.663" level="INFO">Clicked on locator xpath://button[contains(text(),' Complete')]</msg>
+<msg timestamp="20220107 20:20:52.664" level="INFO">16
+5</msg>
+<status status="PASS" starttime="20220107 20:19:32.171" endtime="20220107 20:20:52.664"></status>
+</kw>
+<status status="PASS" starttime="20220107 20:19:32.171" endtime="20220107 20:20:52.665"></status>
+</kw>
+<kw name="Run Keyword If Test Failed" library="BuiltIn" type="teardown">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>Capture Page Screenshot</arg>
+</arguments>
+<status status="PASS" starttime="20220107 20:20:52.665" endtime="20220107 20:20:52.665"></status>
+</kw>
+<tags>
+<tag>ASRI</tag>
+<tag>Generic</tag>
+</tags>
+<status status="PASS" starttime="20220107 20:17:47.844" endtime="20220107 20:20:52.666" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20220107 20:17:47.151" endtime="20220107 20:20:52.667"></status>
+</suite>
+<status status="PASS" starttime="20220107 20:17:47.147" endtime="20220107 20:20:52.670"></status>
+</suite>
+<status status="PASS" starttime="20220107 20:17:47.144" endtime="20220107 20:20:52.672"></status>
+</suite>
+<status status="PASS" starttime="20220107 20:17:47.125" endtime="20220107 20:20:52.674"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">ASRI</stat>
+<stat pass="1" fail="0">Generic</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Solution-IPVPN">Solution-IPVPN</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Tests">Solution-IPVPN.Tests</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="IPVPN">Solution-IPVPN.Tests.IPVPN</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1" name="IPVPN Install Scenarios">Solution-IPVPN.Tests.IPVPN.IPVPN Install Scenarios</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220107 20:17:47.693" level="WARN">Imported library 'c:\shakeoutipvpn\solution-swift-tool\SWIFT_Keywords\SWIFT_OrderValidation_Keywords.py' contains no keywords.</msg>
+<msg timestamp="20220107 20:17:47.781" level="ERROR">Error in file 'C:\ShakeoutIPVPN\Solution-IPVPN\Imports\SES-tool-imports.robot' on line 2: Test library 'SES_Keywords\SES_Home_Keywords.py' does not exist.</msg>
+<msg timestamp="20220107 20:17:47.784" level="ERROR">Error in file 'C:\ShakeoutIPVPN\Solution-IPVPN\Imports\SES-tool-imports.robot' on line 3: Test library 'SES_Keywords\SES_MyServices_Keywords.py' does not exist.</msg>
+<msg timestamp="20220107 20:17:47.786" level="ERROR">Error in file 'C:\ShakeoutIPVPN\Solution-IPVPN\Imports\SES-tool-imports.robot' on line 4: Test library 'SES_Keywords\SES_ExternalAccountNo_Keywords.py' does not exist.</msg>
+<msg timestamp="20220107 20:17:47.788" level="ERROR">Error in file 'C:\ShakeoutIPVPN\Solution-IPVPN\Imports\SES-tool-imports.robot' on line 6: Variable file 'SES_PageObjects\SES_HomePage_Objects.py' does not exist.</msg>
+<msg timestamp="20220107 20:17:47.791" level="ERROR">Error in file 'C:\ShakeoutIPVPN\Solution-IPVPN\Imports\SES-tool-imports.robot' on line 7: Variable file 'SES_PageObjects\SES_MyServices_Objects.py' does not exist.</msg>
+<msg timestamp="20220107 20:17:47.794" level="ERROR">Error in file 'C:\ShakeoutIPVPN\Solution-IPVPN\Imports\SES-tool-imports.robot' on line 8: Variable file 'SES_PageObjects\SES_ExternalAccountNo_Objects.py' does not exist.</msg>
+</errors>
+</robot>
